@@ -31,6 +31,10 @@ import java.util.Collection;
 @ComponentScan(basePackages = { "de.fraunhofer.iais.eis.ids.component.protocol.http.server"} )
 
 public class Main extends MainTemplate implements ComponentInteractorProvider {
+    
+    public Main() {
+        super(javakeystore);
+    }
 
     private final Logger logger = LoggerFactory.getLogger(Main.class);
 
