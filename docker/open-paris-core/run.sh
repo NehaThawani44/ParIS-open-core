@@ -30,6 +30,11 @@ if [ ! -z "$COMPONENT_URI" ]; then
     ARGS="${ARGS} -Dcomponent.uri=${COMPONENT_URI}"
 fi
 
+if [ ! -z "$IDENTITY_JAVAKEYSTORE" ]; then
+    ARGS="${ARGS} -Dssl.javakeystore=${IDENTITY_JAVAKEYSTORE}"
+fi
+
+
 # URI of own catalog
 if [ ! -z "$COMPONENT_CATALOG_URI" ]; then
     ARGS="${ARGS} -Dcomponent.catalogUri=${COMPONENT_CATALOG_URI}"
